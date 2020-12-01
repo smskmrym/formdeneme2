@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ogrenci>
+
+@{ ViewData["Title"] = "liste"; }
+
+<div class="container m-4">
+    <div class="card mx-auto" style="width:500px;">
+        <div class="card-header">
+            Derse Katılanlar
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>Confirm</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ogrenci in Model)
+                {
+    <tr>
+        <td>@ogrenci.Name</td>
+        <td>@ogrenci.Email</td>
+        <td>@ogrenci.Phone</td>
+        <td>@ogrenci.Confirm</td>
+    </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</div>
+
